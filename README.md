@@ -1,8 +1,11 @@
 ---------------------------------------------
-Gabriel Lobin / Last Att ( 7-05-2021 )
+Gabriel Lobin / Last Att ( 7-05-2021 ).;
 ---------------------------------------------
-1 - Aprendendo Bash e Unix ( 05-05-21 / 06-05-21 )
+1 - Aprendendo Bash e Unix ( 05-05-21 / 06-05-21 ).;
 
-2 - Começo do uso do Git / Github ( 07-05-21 )
+2 - Começo do uso do Git / Github ( 07-05-21 ).;
 
-#VQV 
+3 - Continuação Git / Github "cópia, push e pull" ( 10-05-21 ).;
+
+
+#VQV; 

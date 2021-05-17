@@ -1,0 +1,37 @@
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2em;
+ }
+#div1, #div3, #div5{
+    font-style: italic;
+}
+
+#div1:hover {
+    font-style: italic;
+    border: solid red;
+    width: 200px;
+ }
+
+#div2:hover {
+    border: solid green;
+    width: 200px;
+ }
+
+#div3:hover {
+    font-style: italic;
+    border:solid purple;
+    width: 500px ;
+ }
+
+#div4:hover {
+    border: solid black;
+    width: 200px;
+ }
+
+#div5:hover {    
+    border: solid pink;
+    width: 200px;
+ }
+
+ 

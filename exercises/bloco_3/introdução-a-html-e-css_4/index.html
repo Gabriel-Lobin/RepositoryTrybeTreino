@@ -4,16 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>exercício dia 4</title>
+    <style>
+        body {
+            background-color:black;
+            text-align: center;
+        }
+            nav {
+                background-color: white;
+                height: 50px;                
+            }
+                nav a {                    
+                    text-decoration: none;
+                    color: purple;                 
+                    display: inline-block;
+                    margin: 20px;
+                    margin-left: 100px;
+                    margin-right: 100px;
+                    
+                }
+                article a:hover, nav a:hover{
+                    background-color: purple;
+                    color: white;
+                }
+            h1, h3, header, p{
+                color: white;
+            }
+            article {
+                text-align: center;
+            }
+            article h3 {
+                font-size: 30px;
+            }
+            article a {                
+                text-decoration: none;
+                color: white;
+            }
+    </style>
   </head>
   <body>
     <!--insira os elementos aqui-->
-    <header>
+    <header id="header">
         <h1>Soco a 80km/h: Conheça o Stomatopoda.</h1>
     </header>
     <nav>
-        <a href="">Página Inicial</a>
-        <a href="">Sobre</a>
+        <a href="#header">Página Inicial</a>
+        <a href="#sobre">Sobre</a>
         <a href="">Contato</a>
     </nav>
+    <article>
+        <h3 id="sobre">Fatos sobre o Stomatopoda</h3>
+        <div><p><strong>Referencia</strong></p>
+            <a href="https://theoatmeal.com/comics/mantis_shrimp">The oatmeal</a>
+        </div>    
+                <img src="https://s3.amazonaws.com/theoatmeal-img/comics/mantis_shrimp/mantis_shrimp_1.png" alt="Stomatopoda">
+                <img src="https://s3.amazonaws.com/theoatmeal-img/comics/mantis_shrimp/mantis_shrimp_2.png" alt="Stomatopoda">
+                <img src="https://s3.amazonaws.com/theoatmeal-img/comics/mantis_shrimp/mantis_shrimp_3.jpg" alt="Stomatopoda">
+                <img src="https://s3.amazonaws.com/theoatmeal-img/comics/mantis_shrimp/mantis_shrimp_4.png" alt="Stomatopoda">
+                <img src="https://s3.amazonaws.com/theoatmeal-img/comics/mantis_shrimp/mantis_shrimp2_5.png" alt="Stomatopoda">
+                <img src="https://s3.amazonaws.com/theoatmeal-img/comics/mantis_shrimp/mantis_shrimp2_6.png" alt="Stomatopoda">
+                <img src="https://s3.amazonaws.com/theoatmeal-img/comics/mantis_shrimp/mantis_shrimp2_7.png" alt="Stomatopoda">
+
+    </article>
   </body>
 </html>

@@ -1,0 +1,35 @@
+body{
+    font-size:16px;
+}
+h1 {
+    color: orange;
+    font-size: 65px;
+    font-family: sans-serif;
+}
+
+p{
+    font-size: 3em;
+    font-weight: 600px;
+}
+       
+#list {
+    background-color: peachpuff;
+    font-style: italic;
+    line-height: 30px;
+    text-align:center;
+    text-decoration:underline;
+    /* font-style, line-height, text-align e text-decoration */
+}
+.fundo{
+    background-color: powderblue;
+
+}
+#Am{
+    background-color: yellow;
+}
+#Ver{
+    background-color: red;
+}
+#Mar{
+    background-color: brown;
+}

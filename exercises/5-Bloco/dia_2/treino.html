@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<div id="paiDoPai">
+  <div id="pai">
+    <div id="primeiroFilho"></div>
+    <div id="elementoOndeVoceEsta">
+      <div id="primeiroFilhoDoFilho"></div>
+      <div id="segundoEUltimoFilhoDoFilho"></div>
+    </div>
+    Atenção!
+    <div id="terceiroFilho"></div>
+    <div id="quartoEUltimoFilho"></div>
+  </div>
+</div>
+      <script>
+		let paiDoElementEstou = document.getElementById('elementoOndeVoceEsta').parentElement;
+			
+		paiDoElementEstou.style.backgroundColor = 'red';
+		
+		let FilhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
+
+		FilhoDoFilho.innerText = 'Textão gigante uwu';
+
+		let PaiM = document.getElementById('pai').firstChild;
+	
+      </script>
+</body>
+</html>

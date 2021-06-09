@@ -57,13 +57,13 @@ function clickFeriado(){
   let holiday = document.querySelectorAll('.holiday');  
   for (let index = 0; index < holiday.length; index += 1 ) {
     if (holiday[index].style.backgroundColor !== 'green'){
-    document.querySelectorAll('.holiday')[index].style.backgroundColor = 'green';
-    document.querySelectorAll('.holiday')[index].style.color = 'Black';
-    document.querySelectorAll('.holiday')[index].style.borderRadius = '15px';
+      document.querySelectorAll('.holiday')[index].style.backgroundColor = 'green';
+      document.querySelectorAll('.holiday')[index].style.color = 'Black';
+      document.querySelectorAll('.holiday')[index].style.borderRadius = '15px';
     } else {
-    document.querySelectorAll('.holiday')[index].style.backgroundColor = 'rgb(238,238,238)';
-    document.querySelectorAll('.holiday')[index].style.color = '#777';
-    document.querySelectorAll('.holiday')[index].style.borderRadius = '0';
+      document.querySelectorAll('.holiday')[index].style.backgroundColor = 'rgb(238,238,238)';
+      document.querySelectorAll('.holiday')[index].style.color = '#777';
+      document.querySelectorAll('.holiday')[index].style.borderRadius = '0';
     }
   }
 }
@@ -73,17 +73,17 @@ const sextaF = 'Sexta-Feira';
 function Sextou(sextlul) {
   let divBtn = document.querySelector('.buttons-container');
   let btn2 = document.createElement('button');
-  divBtn.appendChild(btn2)
-  btn2.innerText = sextlul;
-  btn2.className = 'btn-friday';
+    divBtn.appendChild(btn2)
+    btn2.innerText = sextlul;
+    btn2.className = 'btn-friday';
 }
 
   Sextou(sextaF);
 
   document.querySelector('.btn-friday').addEventListener('click', clickSexta);
-    let guarda = [4,11,18,25];
-  function clickSexta() {
-    let sextF = document.querySelectorAll('.friday');
+  let guarda = [4,11,18,25];
+function clickSexta() {
+  let sextF = document.querySelectorAll('.friday');
         for (let index = 0; index < sextF.length; index += 1){
       if (sextF[index].innerText !== 'Sextoou') {
         document.querySelectorAll('.friday')[index].innerText = 'Sextoou';
@@ -97,16 +97,20 @@ function Sextou(sextlul) {
   }
   let zoom = document.getElementById('days');
   
-  function ZoomUwu(evento) {       
+function ZoomUwu(evento) {       
     if (evento.target.className === 'day') {
       evento.target.style.fontSize = '40px'; 
-      }
-  }
-  function zoomout(evento) {
-    if (evento.target.style.fontSize !== '20px') {
-      evento.target.style.fontSize = '20px';
+      } 
     }
-  }
+function zoomout(evento) {
+    if (evento.target.style.fontSize !== '20px') {
+        evento.target.style.fontSize = '20px';
+      }
+    }
     zoom.addEventListener('mouseover', ZoomUwu);
     zoom.addEventListener('mouseout', zoomout);
 
+
+  
+
+    

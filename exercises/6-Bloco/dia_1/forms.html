@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body> 
+    <header>
+    <h1>Formulário muito Louco e bem Elaborado</h1>
+    </header>
+    <fieldset class="transparencia bloquin">
+      <label for="name">Nome Completo</label>
+      <input
+        class="transparencia"
+        type="text"
+        name="name"
+        maxlength="40"
+        required
+      /><br /><br />
+      <label for="email">E-mail</label>
+      <input
+        class="transparencia"
+        type="email"
+        name="email"
+        placeholder="exemplo@email.com"
+        maxlength="50"
+        required
+      /><br /><br />
+      <label for="cpf">CPF</label>
+      <input
+        class="transparencia"
+        type="number"
+        name="cpf"
+        placeholder="xxxxxxxxx/xx"
+        maxlength="11"
+        required
+      /><br /><br />
+      <label for="adress">Endereço</label>
+      <input
+        class="transparencia"
+        type="text"
+        name="adress"
+        maxlength="200"
+        required
+      /><br /><br />
+      <label for="city">Cidade</label>
+      <input
+        class="transparencia"
+        type="text"
+        name="city"
+        maxlength="28"
+        required
+      /><br /><br />
+      <label for="state">Estado</label>
+      <select class="transparencia" id="states" required></select
+      ><br /><br />
+      <h4>Moradia</h4>
+      <br />
+      <label for="type1">
+        <input type="radio" name="type" id="type1" checked required />Casa
+      </label>
+      <label for="type2">
+        <input type="radio" name="type" id="type2" />Apartamento </label
+      ><br /><br />
+    </fieldset>
+    <fieldset class="bloquin">
+      <br />
+      <h2>Resumo do Currículo</h2>
+      <br />
+      <textarea
+        class="transparencia"
+        name="resumo"
+        id="resumo"
+        maxlength="1000"
+        cols="50"
+        rows="10"
+      ></textarea
+      ><br />Cargo
+      <input
+        class="transparencia"
+        type="text"
+        name="cargo"
+        id="cargo"
+        maxlength="40"
+        required
+      /><br /><br />
+      <label for="describCargo"></label>Descrição do Cargo
+      <input
+        class="transparencia"
+        type="text"
+        name="descriçãoCargo"
+        id="describCargo"
+        maxlength="500"
+        required
+      /><br /><br />
+      <label for="startDate"></label>Data de inicio
+      <input
+        class="transparencia"
+        type="text"
+        name="date"
+        id="startDate"
+        placeholder="dd/mm/aaaa"
+        required
+      /><br /><br />
+    </fieldset>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,38 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-size: 20px;
-  text-align: center;
-  background-color: rgb(163, 162, 162);
-  color:black;
-  background-image: url(https://www.novaragnarok.com/themes/new/img/wall/NovaRO_Mom.png);  
-  background-position:center;
-  background-repeat:repeat;
-}
-
-option {
-    font-size: 18px;
+  background-image: url(https://www.novaragnarok.com/themes/new/img/wall/NovaRO_Mom.png);
+  background-position: center;
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 
 .transparencia {
-    background-color: transparent;
+  background-color: transparent;
 }
 
-.bloquin {
-  max-width: 80%;
-  padding: 20px 20px;
-  margin: 20px auto;
-  border:double black thick;
-  border-radius: 1.5%;  
-}
-
-header {
-  max-width: 80%;
-  padding: 20px 20px;
-  margin: 20px auto;
-  border:double black thick;
-  border-radius: 1.5%;
+.espaço {
+  margin: 50px auto;
 }

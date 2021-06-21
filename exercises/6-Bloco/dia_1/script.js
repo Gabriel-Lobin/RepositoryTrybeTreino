@@ -32,8 +32,8 @@ window.onload = function () {
   for (let index in estadosBR) {
     let opt = document.createElement("option");
     opt.value = index;
-    opt.style.backgroundColor = 'black';
-    opt.style.color = 'white';
+    opt.style.backgroundColor = "black";
+    opt.style.color = "white";
     opt.innerText = estadosBR[index];
     state.appendChild(opt);
   }

@@ -65,15 +65,39 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
-function smallerName() {
-  // escreva aqui o seu código
-  let nameBook = books[0].name;  
-    books.forEach((compareAutor) => {
-      if (compareAutor.name.length < nameBook.length) {
-        nameBook = compareAutor.name;
-      }
-    }) 
-  return nameBook;
+const expectedResult = [
+  {
+    id: 6,
+    name: 'O Chamado de Cthulhu',
+    genre: 'Terror',
+    author: { name: 'H. P. Lovecraft', birthYear: 1890 },
+    releaseYear: 1928,
+  },
+  {
+    id: 3,
+    name: 'Fundação',
+    genre: 'Ficção Científica',
+    author: { name: 'Isaac Asimov', birthYear: 1920 },
+    releaseYear: 1951,
+  },
+  {
+    id: 2,
+    name: 'O Senhor dos Anéis',
+    genre: 'Fantasia',
+    author: { name: 'J. R. R. Tolkien', birthYear: 1892 },
+    releaseYear: 1954,
+  },
+];
+
+function oldBooksOrdered() {
+  // escreva seu código aqui
+  let velhos = books.filter((book) => {
+    return 2021 - book.releaseYear > 60;
+  })
+  velhos = velhos.sort((valor1, valor2) => {
+    return valor1.releaseYear - valor2.releaseYear;
+  })  
+  return velhos
 }
 
-assert.strictEqual(smallerName(), 'Duna');
+assert.deepStrictEqual(oldBooksOrdered(), expectedResult);

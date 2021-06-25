@@ -65,15 +65,22 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
-function smallerName() {
-  // escreva aqui o seu código
-  let nameBook = books[0].name;  
-    books.forEach((compareAutor) => {
-      if (compareAutor.name.length < nameBook.length) {
-        nameBook = compareAutor.name;
-      }
-    }) 
-  return nameBook;
+const expectedResult = [
+  'O Senhor dos Anéis',
+  'Fundação',
+  'O Chamado de Cthulhu',
+];
+
+function oldBooks() {
+  // escreva seu código aqui
+  let velhos = books.filter((book) => {
+    return 2021 - book.releaseYear > 60;
+  }) 
+  const livros = velhos.map((livro) => {
+    return livro.name;
+  }) 
+  return livros
 }
 
-assert.strictEqual(smallerName(), 'Duna');
+
+assert.deepStrictEqual(oldBooks(), expectedResult);

@@ -65,15 +65,10 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
-function smallerName() {
-  // escreva aqui o seu código
-  let nameBook = books[0].name;  
-    books.forEach((compareAutor) => {
-      if (compareAutor.name.length < nameBook.length) {
-        nameBook = compareAutor.name;
-      }
-    }) 
-  return nameBook;
+const expectedResult = 'O Senhor dos Anéis';
+
+function authorWith3DotsOnName() {
+  // escreva seu código aqui
 }
 
-assert.strictEqual(smallerName(), 'Duna');
+assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);

@@ -65,15 +65,45 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
-function smallerName() {
-  // escreva aqui o seu código
-  let nameBook = books[0].name;  
-    books.forEach((compareAutor) => {
-      if (compareAutor.name.length < nameBook.length) {
-        nameBook = compareAutor.name;
-      }
-    }) 
-  return nameBook;
+const expectedResult = [
+  {
+    age: 31,
+    author: 'Isaac Asimov',
+  },
+  {
+    age: 38,
+    author: 'H. P. Lovecraft',
+  },
+  {
+    age: 39,
+    author: 'Stephen King',
+  },
+  {
+    age: 43,
+    author: 'George R. R. Martin',
+  },
+  {
+    age: 45,
+    author: 'Frank Herbert',
+  },
+  {
+    age: 62,
+    author: 'J. R. R. Tolkien',
+  },
+];
+
+function nameAndAge() {
+  // escreva seu código aqui
+  let list = books.map((autor) => {
+   return ({
+      age:  autor.releaseYear - autor.author.birthYear,
+      author: autor.author.name
+    })
+  });
+  list = list.sort((age1, age2) => {
+    return age1.age - age2.age;
+  })  
+  return list
 }
 
-assert.strictEqual(smallerName(), 'Duna');
+assert.deepStrictEqual(nameAndAge(), expectedResult);

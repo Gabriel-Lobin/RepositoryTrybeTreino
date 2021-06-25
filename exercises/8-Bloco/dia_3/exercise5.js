@@ -65,15 +65,24 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
-function smallerName() {
-  // escreva aqui o seu código
-  let nameBook = books[0].name;  
-    books.forEach((compareAutor) => {
-      if (compareAutor.name.length < nameBook.length) {
-        nameBook = compareAutor.name;
-      }
-    }) 
-  return nameBook;
-}
+const expectedResult = [
+  'Frank Herbert',
+  'George R. R. Martin',
+  'Isaac Asimov',
+  'J. R. R. Tolkien',
+];
 
-assert.strictEqual(smallerName(), 'Duna');
+function fantasyOrScienceFictionAuthors() {
+  // escreva seu código aqui  
+  let final = books.filter((book) => {
+    return book.genre === 'Ficção Científica' || book.genre === 'Fantasia';
+  });
+  
+  let livros = final.map((livro) => livro.author.name);  
+  
+  livros.sort()
+  
+    return livros; 
+};
+
+assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult);

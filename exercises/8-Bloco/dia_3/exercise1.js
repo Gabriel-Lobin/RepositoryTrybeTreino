@@ -65,15 +65,21 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
-function smallerName() {
-  // escreva aqui o seu código
-  let nameBook = books[0].name;  
-    books.forEach((compareAutor) => {
-      if (compareAutor.name.length < nameBook.length) {
-        nameBook = compareAutor.name;
-      }
-    }) 
-  return nameBook;
+const expectedResult = [
+  'As Crônicas de Gelo e Fogo - Fantasia - George R. R. Martin',
+  'O Senhor dos Anéis - Fantasia - J. R. R. Tolkien',
+  'Fundação - Ficção Científica - Isaac Asimov',
+  'Duna - Ficção Científica - Frank Herbert',
+  'A Coisa - Terror - Stephen King',
+  'O Chamado de Cthulhu - Terror - H. P. Lovecraft',
+];
+
+function formatedBookNames() {
+  // escreva seu código aqui
+  const array = books.map((book) => {
+    return `${book.name} - ${book.genre} - ${book.author.name}`
+  })
+  return array;
 }
 
-assert.strictEqual(smallerName(), 'Duna');
+assert.deepStrictEqual(formatedBookNames(), expectedResult);

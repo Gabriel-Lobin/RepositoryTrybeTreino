@@ -65,21 +65,16 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
-const expectedResult = 'O Senhor dos Anéis';
+const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.";
 
-function authorWith3DotsOnName() {
+function reduceNames() {
   // escreva seu código aqui
-  let nomes = books.filter((book) => {
-    let livro = book.author.name;
-    for (let key in livro) {
-      if (livro[key] === '.') {
-        console.log(livro);
-        return livro;
-      }
+  return books.reduce((acumulador, atual, index) => {
+    if (books.length - 1 === index) {
+      return acumulador + atual.author.name + '.';
     }
-  }) 
-  
-  
+    return acumulador + atual.author.name + ', ';
+  }, '')
 }
-
-assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
+console.log(reduceNames());
+assert.strictEqual(reduceNames(), expectedResult);

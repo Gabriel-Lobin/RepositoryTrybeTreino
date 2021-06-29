@@ -65,21 +65,13 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
-const expectedResult = 'O Senhor dos Anéis';
+const expectedResult = 43;
 
-function authorWith3DotsOnName() {
+function averageAge() {
   // escreva seu código aqui
-  let nomes = books.filter((book) => {
-    let livro = book.author.name;
-    for (let key in livro) {
-      if (livro[key] === '.') {
-        console.log(livro);
-        return livro;
-      }
-    }
-  }) 
-  
-  
+let arrayDatas = books.map((datas) => datas.releaseYear - datas.author.birthYear )
+  .reduce((acumulador, atual) => acumulador + atual )
+  return arrayDatas / books.length;
 }
 
-assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
+assert.strictEqual(averageAge(), expectedResult);

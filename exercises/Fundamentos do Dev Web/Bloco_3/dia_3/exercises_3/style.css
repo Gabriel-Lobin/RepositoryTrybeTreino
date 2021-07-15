@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.all {
+    padding: 2em;   
+    }
+
+#header {
+    
+    margin: auto;
+    text-align: center;
+    padding: 50px 10px;
+    width: 500px;
+    
+    }
+
+#meio {
+    
+    margin: auto;
+    text-align: center;
+    padding: 50px 10px;
+    width: 500px;
+    
+    }
+
+.pisca:hover {
+
+    background-color: black;
+    color: white;
+
+    }
+
+.pisca:active {
+
+    background-color: red;
+    font-family: 'Courier New', Courier, monospace;
+
+}   
+
+li {
+   
+   font-family:Arial, Helvetica, sans-serif ;
+   font-size: 20px;
+   height: 10px;
+   list-style: none;
+   padding: 30px;
+   
+    }

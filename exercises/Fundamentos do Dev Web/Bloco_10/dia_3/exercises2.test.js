@@ -1,4 +1,3 @@
-const { test } = require('@jest/globals');
 const functions = require('./exercises2');
 const { randomNumber } = functions;
 

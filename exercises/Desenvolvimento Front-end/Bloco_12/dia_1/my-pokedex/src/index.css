@@ -1,0 +1,75 @@
+body {
+  background-image: url('https://media.sketchfab.com/models/94dbd59e5ee743a68d1773085fc99510/thumbnails/8c53573d91a741ac9c53023f856a801b/3d7d6dc363054236a3744a4f4a984c86.jpeg');
+  background-size:cover;
+  background-position: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.head-page {
+  align-items: center;
+  background-color: rgb(81, 150, 219);
+  border-bottom: rgb(81, 219, 219) solid 5px;
+  display: flex;  
+  height: 100px;
+  justify-content: space-between;  
+}
+
+.head-page h1 {
+  color: black;
+  font-size: 80px;
+}
+
+.head-page img {
+  height: 100px;
+}
+
+::placeholder {
+  color: black;
+}
+
+.poke-Filter {
+  background-color: rgb(81, 150, 219);
+  border:rgb(81, 219, 219) solid 5px;
+  border-radius: 15px;
+  color: black;
+  font-size: 30px;
+  height: 50px;
+  margin: 50px;
+  text-align: center;
+  width: 500px;
+}
+
+.Card-List {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px;
+}
+
+.Card-Poke { 
+  align-items: center;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgU6zRzeksquzcoEg2e3O7MbaSzgMjh72svA&usqp=CAU');  
+  border: rgb(81, 219, 219) solid 5px;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  margin: 15px;   
+  width: 200px;
+}
+
+img {
+  background-color: rgba(255, 255, 255, 50%);
+  border-radius: 50px;
+}

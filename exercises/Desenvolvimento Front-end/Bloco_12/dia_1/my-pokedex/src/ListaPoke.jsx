@@ -2,7 +2,7 @@ import React from 'react'
 
 class ListaPoke extends React.Component {
   render() {
-    const { name, type, image, Weight } = this.props;
+    const { name, type, image, Weight, moreInfo } = this.props;
     const { value, measurementUnit } = Weight;
     return (
       <div className='Card-Poke'>
@@ -12,7 +12,10 @@ class ListaPoke extends React.Component {
         <br />
         <div>
           <span>Weight: { value }</span>
-          <span>{ measurementUnit }</span>
+          <span>{measurementUnit}</span>
+          <div className="link">
+            <a href={moreInfo}>mais Info</a>
+          </div>
         </div>
       </div>
     );

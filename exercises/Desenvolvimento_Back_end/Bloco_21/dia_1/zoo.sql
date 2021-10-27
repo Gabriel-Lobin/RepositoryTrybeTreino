@@ -2,13 +2,31 @@ CREATE SCHEMA IF NOT EXISTS zoo;
 
 USE zoo;
 
+CREATE TABLE sexo_animal (
+	sexo_id INT PRIMARY KEY AUTO_INCREMENT,
+    sexo VARCHAR(5) NOT NULL
+);
+
+CREATE TABLE localizacoes (
+	localizacao_id INT PRIMARY KEY AUTO_INCREMENT,
+    localizacao VARCHAR(10) NOT NULL
+);
+
+CREATE TABLE especies (
+	especie_id INT PRIMARY KEY AUTO_INCREMENT,
+    especie VARCHAR(10) NOT NULL
+);
+
 CREATE TABLE animais (
 	animal_id INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(20) NOT NULL,
-    especie VARCHAR(10) NOT NULL,
-    sexo VARCHAR(5) NOT NULL ,
+    especie_id INT NOT NULL,
+    sexo_id INT NOT NULL ,
     idade INT NOT NULL,
-    localizacao VARCHAR(10) NOT NULL
+    localizacao_id INT NOT NULL,
+    FOREIGN KEY (especie_id) REFERENCES especies (especie_id),
+    FOREIGN KEY (sexo_id) REFERENCES sexo_animal (sexo_id),
+    FOREIGN KEY (localizacao_id) REFERENCES localizacoes (localizacao_id)    
 );
 
 CREATE TABLE cuidadores (
@@ -37,20 +55,45 @@ CREATE TABLE cuidador_animal (
     CONSTRAINT PRIMARY KEY (cuidador_id, animal_id)
 );
 
-
-
-INSERT INTO animais (nome, especie, sexo, idade, localizacao)
+INSERT INTO sexo_animal (sexo)
 VALUES 
-('margarida', 'hipopotamo', 'femea', 6, 'noroeste'),
-('mark', 'leão', 'macho', 12, 'sul'),
-('zé', 'chipanze', 'macho', 20, 'leste'),
-('monica', 'chipanze', 'femea', 25, 'leste'),
-('didi', 'zebra', 'macho', 4, 'oeste'),
-('mama', 'cobra', 'femea', 16, 'sudeste'),
-('binho', 'tartaruga', 'macho', 125, 'norte'),
-('binha', 'tartaruga', 'femea', 120, 'norte'),
-('biscoito', 'elefante', 'macho', 45, 'sudoeste'),
-('mica', 'lontra', 'femea', 15, 'nordeste');
+('macho'),
+('femea');
+
+INSERT INTO localizacoes (localizacao)
+VALUES
+('noroeste'),
+('norte'),
+('nordeste'),
+('oeste'),
+('leste'),
+('sudoeste'),
+('sul'),
+('sudoete');
+
+INSERT INTO especies (especie)
+VALUES 
+('hipopotamo'),
+('leão'),
+('chipanze'),
+('zebra'),
+('cobra'),
+('tartaruga'),
+('elefante'),
+('lontra');
+
+INSERT INTO animais (nome, especie_id, sexo_id, idade, localizacao_id)
+VALUES 
+('margarida', 1, 2, 6, 1),
+('mark', 2, 1, 12, 7),
+('zé', 3, 1, 20, 5),
+('monica', 3, 2, 25, 5),
+('didi', 4, 1, 4, 4),
+('mama', 5, 2, 16, 6),
+('binho', 6, 1, 125, 2),
+('binha', 6, 2, 120, 2),
+('biscoito', 7, 1, 45, 8),
+('mica', 8, 2, 15, 3);
 
 INSERT INTO cuidadores (nome)
 VALUES
@@ -91,8 +134,4 @@ VALUES
 (6,2),
 (7,2),
 (8,2);
-
-
-
-
 

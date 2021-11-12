@@ -1,0 +1,52 @@
+use('bios');
+db.bios.find({_id:8});
+
+
+use('bios');
+db.bios.find({_id:8},{_id:true, name:true});
+
+
+use('bios');
+db.bios.find({_id:8}, {name:true, birth:true});
+
+
+use('bios');
+db.bios.find({"name.first":"John"}).pretty();
+
+
+use('bios');
+db.bios.find().limit(3).pretty();
+
+
+use('bios');
+db.bios.find().skip(5).limit(2).pretty();
+
+
+use('bios');
+db.bios.find().limit(3).pretty();
+
+// Comandos que usei para importar o banco
+//curl -o book.json https://s3.us-east-2.amazonaws.com/assets.app.betrybe.com/back-end/mongodb/books-48d15e4d8924badc2308cc4a62eb3ea4.json
+
+//mongoimport --db amazonBooks --collection books --file book.json 
+
+-----------------------------------------------------
+// ajuda do caputo para usar o mongoimport
+//mongoimport --uri "url" --drop--collection "collectionName" --file "localFileLocation"
+-----------------------------------------------------
+
+use('amazonBooks');
+db.books.count();
+
+
+use('amazonBooks');
+db.books.find({status:"PUBLISH"}).pretty();
+
+
+
+use('amazonBooks');
+db.books.find({},{title:true,isbn:true,pageCount:true, _id:false}).limit(3).pretty();
+
+
+use('amazonBooks');
+db.books.find({status:"MEAP"},{title:true,isbn:true,pageCount:true, _id:false}).skip(5).limit(10).pretty();

@@ -1,0 +1,9 @@
+use('class');
+db.filmes.find({diretor: "Quentin Tarantino", "avaliacao.bom": { $gte: 5, $lte:10 }});
+
+
+use('class');
+db.filmes.find({ano: 2014, "avaliacao.ruim": { $not:{ $gte: 5, $lte:10 }}});
+
+use('class');
+db.filmes.find({diretor:{$in:["Christopher Nolan",  "Peter Jackson"]} });

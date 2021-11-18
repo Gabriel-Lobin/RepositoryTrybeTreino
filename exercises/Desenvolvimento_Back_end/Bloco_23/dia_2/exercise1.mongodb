@@ -1,0 +1,83 @@
+// Código usado para pegar o banco
+"curl -o hero.json https://s3.us-east-2.amazonaws.com/assets.app.betrybe.com/back-end/mongodb/superheroes-957c961ea234d06d7cfdae73c87d47a6.json"
+
+"mongoimport --db class --collection superheroes --file hero.json"
+// *******************************************
+
+use('class');
+db.superheroes.find();
+
+
+use('class');
+db.superheroes.find({"aspects.height": { $lt: 180 } });
+
+
+use('class');
+db.superheroes.find({"aspects.height": { $lt: 180 } }).count();
+
+
+use('class');
+db.superheroes.find({"aspects.height": { $lte: 180 } }).count();
+
+
+use('class');
+db.superheroes.find({"aspects.height": { $gte: 200 } });
+
+
+use('class');
+db.superheroes.find({"aspects.height": { $gte: 200 } }).count();
+
+
+use('class');
+db.superheroes.find({"aspects.eyeColor": "green" });
+
+
+use('class');
+db.superheroes.find({"aspects.eyeColor": "blue" }).count();
+
+
+use('class');
+db.superheroes.find({"aspects.hairColor": { $in: ["Black", "No Hair"] } });
+
+
+use('class');
+db.superheroes.find({"aspects.hairColor": { $in: ["Black", "No Hair"] } }).count();
+
+
+use('class');
+db.superheroes.find({"aspects.hairColor": { $not: { $in: ["Black", "No Hair"] } } }).count();
+
+
+use('class');
+db.superheroes.find({"aspects.height": { $not: { $gt: 180 } } }).count();
+
+
+use('class');
+db.superheroes.find({ $nor: [ { race: /human/i }, {"aspects.height": { $gt: 180 } } ] });
+
+
+use('class');
+db.superheroes.find({"aspects.height": { $in: [180,200] }, publisher: "Marvel Comics" });
+
+
+use('class');
+db.superheroes.find({"aspects.weight": { $gt: 80, $lt: 100 }, race: { $in:[/human/i, /mutant/i] }, publisher: { $not: { $eq: "DC Comics" } } });
+
+
+use('class');
+db.superheroes.find({race: { $exists: false } }).count();
+//or
+use('class');
+db.superheroes.find({race: { $not: { $exists: true }  } }).count();
+
+
+use('class');
+db.superheroes.find({"aspects.hairColor": { $exists: true } }).count();
+
+
+use('class');
+db.superheroes.deleteOne({publisher: "Sony Pictures" });
+
+
+use('class');
+db.superheroes.deleteMany({publisher: "George Lucas"});

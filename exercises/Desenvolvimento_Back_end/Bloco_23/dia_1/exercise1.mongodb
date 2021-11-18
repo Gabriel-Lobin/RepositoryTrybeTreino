@@ -28,7 +28,8 @@ db.bios.find().limit(3).pretty();
 // Comandos que usei para importar o banco
 //curl -o book.json https://s3.us-east-2.amazonaws.com/assets.app.betrybe.com/back-end/mongodb/books-48d15e4d8924badc2308cc4a62eb3ea4.json
 
-//mongoimport --db amazonBooks --collection books --file book.json 
+mongoimport --db amazonBooks --collection books --file book.json 
+
 
 -----------------------------------------------------
 // ajuda do caputo para usar o mongoimport
@@ -41,7 +42,6 @@ db.books.count();
 
 use('amazonBooks');
 db.books.find({status:"PUBLISH"}).pretty();
-
 
 
 use('amazonBooks');

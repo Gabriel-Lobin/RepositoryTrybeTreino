@@ -1,0 +1,162 @@
+use('class');
+db.filmes.insertMany([{
+  "title": "Batman",
+  "category": [ "action", "adventure" ],
+  "imdbRating": 7.6,
+  "budget": 35
+},
+{
+  "title": "Godzilla",
+  "category": [ "action", "adventure", "sci-fi" ],
+  "imdbRating": 6.6
+},
+{
+  "title": "Home Alone",
+  "category": [ "family", "comedy" ],
+  "imdbRating": 7.4
+}]);
+
+use('class');
+db.filmes.updateOne({
+    title: "Batman",
+}, {
+    $set: {
+        imdRating: 7.7,
+    }
+});
+
+
+use('class');
+db.filmes.updateOne({
+    title: "Godzilla",
+}, {
+    $set: {
+        budget: 1,
+    }
+});
+
+
+use('class');
+db.filmes.updateOne({
+    title: "Home Alone",
+}, {
+    $set: {
+        budget: 15,
+        imdbRating: 5.5
+    }
+});
+
+
+use('class');
+db.filmes.updateOne({
+    title: "Batman",
+}, {
+    $inc: {        
+        imdbRating: 2
+    }
+});
+
+
+use('class');
+db.filmes.updateOne({
+    title: "Home Alone",
+}, {
+    $inc: {
+        budget: 5,
+    }
+});
+
+
+use('class');
+db.filmes.updateOne({
+    title: "Home Alone",
+}, {
+    $set: {
+        budget: 15,
+        imdbRating: 5.5
+    }
+});
+
+
+use('class');
+db.filmes.updateOne({
+    title: "Batman",
+}, {
+    $mul: {        
+        imdbRating: 4
+    }
+});
+
+
+use('class');
+db.filmes.updateOne({
+    title: "Batman",
+}, {
+    $rename: {        
+        budget: "estimatedBudget"
+    }
+});
+
+
+use('class');
+db.filmes.updateOne({
+    title: "Home Alone",
+}, {
+    $min: {        
+        budget: 5
+    }
+});
+
+
+use('class');
+db.filmes.updateOne({
+    title: "Godzilla",
+}, {
+    $max: {        
+        imdbRating: 8.6
+    },
+    $set: {
+        "category.1": "thriller"
+    }
+});
+
+
+use('class');
+db.filmes.updateOne({
+    title: "Home Alone",
+}, {
+    $currentDate: {     
+        lastModified: true,   
+        lastUpdated: { $type: "timestamp" }
+    }
+});
+
+
+use('class');
+db.filmes.updateMany({}, {
+    $set: {
+        sequels: 0
+    }
+});
+
+
+use('class');
+db.filmes.updateMany({}, {
+    $unset: {     
+        "budget": "",
+        "estimatedBudget": "",
+    }
+});
+
+
+use('class');
+db.filmes.updateMany({
+    title: { $in: ["Batman", "Home Alone"] }
+}, {
+    $max: {     
+        imdbRating: 17
+    }
+});
+
+use('class');
+db.filmes.find({title: {$exists: true}});

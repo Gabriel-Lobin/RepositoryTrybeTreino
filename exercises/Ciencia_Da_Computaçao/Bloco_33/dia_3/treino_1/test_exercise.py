@@ -1,4 +1,6 @@
-from exercise import sum_num, subtract_num, divide_num, number_is_even_or_odd
+from nis import match
+from exercise import sum_num, subtract_num, divide_num, number_is_even_or_odd, divide_number
+import pytest
 
 
 def test_if_return_a_sum_of_numbers():
@@ -19,3 +21,8 @@ def test_if_number_is_odd():
 
 def test_if_number_is_even():
     assert number_is_even_or_odd(5) == 'numero impar'
+
+
+def test_if_error_exist():
+    with pytest.raises(ZeroDivisionError, match="division by zero"):
+        divide_number(2, 0) 

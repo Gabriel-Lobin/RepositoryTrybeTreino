@@ -15,3 +15,7 @@ def number_is_even_or_odd(num):
         return 'numero par'
     elif num % 2 != 0:
         return 'numero impar'
+
+
+def divide_number(num1, num2):
+    return num1 / num2
